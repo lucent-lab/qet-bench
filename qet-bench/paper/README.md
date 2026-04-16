@@ -68,7 +68,7 @@ python scripts/make_all_figures.py
 
 These commands were run locally on Python 3.11 and Python 3.12. Hosted GitHub
 Actions is configured, but hosted jobs were blocked before execution by the
-account billing/spending limit at the time this note was written. The latest
+account billing/spending limit at the time this note was written. A representative
 blocked hosted run was
 <https://github.com/lucent-lab/qet-bench/actions/runs/24507161016>.
 
