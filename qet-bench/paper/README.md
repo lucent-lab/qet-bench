@@ -48,7 +48,7 @@ The paper text is not yet a final submission. The hard blockers are:
 |---|---|
 | Author metadata | Confirm author list, affiliations, ORCID identifiers, and corresponding author. |
 | Archival DOI | Archive the target release with Zenodo, Software Heritage, or equivalent and update the paper metadata. |
-| Repository access | Ensure the GitHub repository is public or that reviewers have explicit access. |
+| Repository access | Closed: the GitHub repository is public at <https://github.com/lucent-lab/qet-bench>. |
 | Public history | JOSS currently screens for sustained public development history and research impact; submit to JOSS only after those signals exist. |
 | Hosted CI | Re-run GitHub Actions when quota is available, or clearly document local CI as the validation record for a reproducibility venue. |
 | Community guidelines | Keep `../CONTRIBUTING.md` current and make sure issue reporting and contribution workflow are visible from the repository root. |
@@ -67,10 +67,9 @@ python scripts/make_all_figures.py
 ```
 
 These commands were run locally on Python 3.11 and Python 3.12. Hosted GitHub
-Actions is configured, but hosted jobs were blocked before execution by the
-account billing/spending limit at the time this note was written. A representative
-blocked hosted run was
-<https://github.com/lucent-lab/qet-bench/actions/runs/24507161016>.
+Actions passed on Python 3.11 and Python 3.12 after the repository was made
+public:
+<https://github.com/lucent-lab/qet-bench/actions/runs/24507308274>.
 
 ## Venue Fit
 
