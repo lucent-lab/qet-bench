@@ -4,7 +4,9 @@ This register tracks the project roadmap at publication granularity. It should
 be updated whenever a stage changes status, a release tag is cut, or an archive
 DOI becomes available.
 
-For review risks and submission blockers, see `blocker_ledger.md`.
+For the step-by-step path from the QET benchmark into broader void/vacuum
+energy-accounting work, see `vacuum_investigation_roadmap.md`. For review risks
+and submission blockers, see `blocker_ledger.md`.
 
 Status values:
 
@@ -35,6 +37,7 @@ Reference policy:
 | Full microscopic controller/environment ledger | Not done | New methods territory | Replace conservative bookkeeping diagnostics with an explicit modeled controller, memory reset, pulse, and environment exchange ledger. | none |
 | Many-qubit QET extension | Not done | New physics/simulation territory | Extend beyond two qubits to chains or network geometries, with explicit local-energy partitions and finite-size/scaling diagnostics. | none |
 | Finite-temperature or mixed-state QET | Not done | New physics/simulation territory | Study thermal or mixed resource states and compare extraction/accounting behavior against the pure ground-state benchmark. | none |
+| DCE/Casimir/ultrastrong-coupling audit module | Not done | New vacuum-mechanism audit territory | Add a separate module that tracks pump, switching, reset, and environment work for one non-QET vacuum-adjacent mechanism. | none |
 | Hardware or hardware-faithful execution | Not done | New experimental/hardware-simulation territory | Define a circuit/backend protocol, calibration assumptions, count-processing path, and bounded interpretation for real or hardware-faithful execution. | none |
 
 ## Maintenance Checklist
