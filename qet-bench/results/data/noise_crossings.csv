@@ -1,0 +1,7 @@
+sweep,x_column,first_sampled_nonpositive_x,max_E_B,min_E_B
+feedforward_error,feedforward_error_probability,0.26,0.07257277587322122,-0.21026993660139753
+readout_error,readout_error_probability,0.26,0.07257277587322122,-0.21026993660139753
+dephasing,noise_strength,0.14,0.07257277587322122,-0.49311264907601676
+depolarizing,noise_strength,0.04,0.07257277587322122,-1.8130453072909045
+amplitude_damping,noise_strength,0.04,0.07257277587322122,-2.6065518505672247
+bob_angle_miscalibration,angle_offset,-0.35,0.07257277587322128,-0.25999059216704723

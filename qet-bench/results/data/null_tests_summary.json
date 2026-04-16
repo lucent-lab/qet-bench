@@ -1,0 +1,11 @@
+{
+  "baseline_E_B": 0.07257277587322122,
+  "k_zero_E_B": -0.0,
+  "scrambled_q_half_E_B": -0.06884858036408813,
+  "product_00_E_B": -2.606551850567225,
+  "bob_only_max_E_B": -8.181169918880515e-07,
+  "wrong_angle_max_E_B": 0.07257277587322122,
+  "wrong_angle_phi_at_max_E_B": 0.16087527719832106,
+  "wrong_angle_phi_optimal": 0.1608752771983211,
+  "bob_only_diagnostic": "finite random diagnostic, not an exhaustive theorem"
+}

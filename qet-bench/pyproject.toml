@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools==82.0.1", "wheel==0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qet-bench"
+version = "0.1.0"
+description = "Reproducible exact benchmarks for minimal two-qubit Quantum Energy Teleportation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "qet-bench contributors" }
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "pandas",
+  "matplotlib"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

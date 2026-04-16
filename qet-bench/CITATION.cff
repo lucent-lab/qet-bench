@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use qet-bench, please cite this software."
+title: "qet-bench: Exact two-qubit Quantum Energy Teleportation benchmarks"
+version: 0.1.0
+date-released: 2026-04-16
+authors:
+  - family-names: "qet-bench contributors"
+license: MIT
+abstract: "A reproducible benchmark suite for minimal two-qubit Quantum Energy Teleportation with explicit energy accounting."

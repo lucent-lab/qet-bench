@@ -1,0 +1,14 @@
+{
+  "description": "Columns are true bit values and rows are reported bit values.",
+  "symmetric_error_probability": 0.05,
+  "matrix": [
+    [
+      0.95,
+      0.05
+    ],
+    [
+      0.05,
+      0.95
+    ]
+  ]
+}
