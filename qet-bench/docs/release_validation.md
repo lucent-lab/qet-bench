@@ -12,7 +12,7 @@ Hosted CI status:
 
 - Workflow: `.github/workflows/ci.yml`
 - Latest hosted run checked:
-  <https://github.com/lucent-lab/qet-bench/actions/runs/24506144229>
+  <https://github.com/lucent-lab/qet-bench/actions/runs/24507161016>
 - Result: jobs did not start because the account billing/spending limit blocked
   hosted runners.
 
