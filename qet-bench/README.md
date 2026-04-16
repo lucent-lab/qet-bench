@@ -43,6 +43,21 @@ ratio `R(lambda)=E_B(lambda)/E_B(0)`.
 See [docs/artifact_manifest.md](docs/artifact_manifest.md) for the full
 CSV/figure provenance table.
 
+## Optional Qiskit/Aer Bridge
+
+Qiskit and Qiskit Aer are optional interoperability dependencies, not part of
+the base reproducibility path. The bridge provides branch-resolved ideal
+circuits and a count-key normalizer for Qiskit's bitstring convention:
+
+```bash
+pip install -e ".[qiskit]"
+python scripts/run_qiskit_bridge.py
+```
+
+The bridge keeps the exact ledger as the source of truth and does not require
+hardware backends, cloud credentials, or dynamic-circuit support. See
+[docs/qiskit_interop.md](docs/qiskit_interop.md) for the bit-order contract.
+
 ## Artifact Manifest
 
 | Artifact | Script | What it validates |
@@ -95,7 +110,8 @@ measurement outcomes are averaged. The package never postselects branches.
 ## Repository Layout
 
 - `src/qet_bench/`: exact model, ledgers, null tests, noise helpers, counts,
-  uncertainty propagation, sweeps, controller/battery accounting, and plotting.
+  uncertainty propagation, sweeps, controller/battery accounting, optional
+  Qiskit/Aer interop, and plotting.
 - `scripts/`: reproduction and figure-generation entry points.
 - `tests/`: regression tests for exact values, accounting, null behavior, and
   count-estimator conventions.

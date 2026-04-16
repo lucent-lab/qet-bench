@@ -23,6 +23,10 @@ dependencies = [
 dev = [
   "pytest"
 ]
+qiskit = [
+  "qiskit",
+  "qiskit-aer"
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -56,6 +56,17 @@ Artifact classes used below:
 | `results/data/null_tests_summary.json` | Release diagnostic | `scripts/run_null_tests.py` | `test_null_k_zero.py`, `test_scrambled_bit.py` | Compact summary for the null-test comparison figure. |
 | `results/data/readout_confusion_example.json` | Convention helper | `scripts/run_noise_sweeps.py` | `test_noise_readout.py`, `test_counts.py` | Example 2x2 binary confusion matrix convention; columns are true bits and rows are reported bits. |
 
+## Optional Interoperability Artifacts
+
+These artifacts are not part of the deterministic base `make_all_figures.py`
+path because they require optional Qiskit/Aer dependencies. They are useful as
+interoperability smoke checks, while the exact and reference-branch ledgers
+remain the source of truth.
+
+| Artifact | Class | Generator | Validation coverage | What it validates |
+|---|---|---|---|---|
+| `results/data/qiskit_bridge_benchmarks.csv` | Optional interoperability diagnostic | `scripts/run_qiskit_bridge.py` | `test_qiskit_bridge.py` | Branch-resolved ideal Aer count estimates against the exact `E_B` scale, when `pip install -e ".[qiskit]"` is available. |
+
 ## Figure Artifacts
 
 | Artifact | Class | Generator | Source data | What it shows |
