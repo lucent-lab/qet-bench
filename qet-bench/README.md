@@ -35,8 +35,8 @@ The scripts write reproducible artifacts under `results/data/` and
 `results/figures/`.
 
 `make_all_figures.py` emits the exact ledger sweep, null-test diagnostics,
-wrong-angle scan, feedforward/readout error sweeps, dephasing, depolarizing,
-amplitude-damping, Bob-angle miscalibration, and coarse sampled crossing
+wrong-angle scan, Alice-bit sign-flip/readout-control sweeps, dephasing,
+depolarizing, amplitude-damping, Bob-angle miscalibration, and coarse sampled crossing
 summaries. It also emits fixed-protocol noise-survival diagnostics across a
 small predeclared `(h, k)` anchor set using the ratio
 `R(lambda)=E_B(lambda)/E_B(0)`.
@@ -68,8 +68,8 @@ hardware backends, cloud credentials, or dynamic-circuit support. See
 | `results/figures/energy_ledger_vs_h_over_k.png` | `scripts/run_parameter_sweep.py` | Visual ledger check for the exact protocol as coupling ratio varies. |
 | `results/data/feedforward_error_sweep.csv` | `scripts/run_noise_sweeps.py` | Sensitivity to scrambled classical feedforward. |
 | `results/figures/eb_vs_feedforward_error.png` | `scripts/run_noise_sweeps.py` | Monotone loss or reversal of Bob extraction under feedforward error. |
-| `results/data/readout_error_sweep.csv` | `scripts/run_noise_sweeps.py` | Symmetric Alice-bit readout corruption model. |
-| `results/figures/eb_vs_readout_error.png` | `scripts/run_noise_sweeps.py` | Readout-error diagnostic for the classical control path. |
+| `results/data/readout_error_sweep.csv` | `scripts/run_noise_sweeps.py` | Symmetric Alice-bit sign-flip model labeled for the readout/control path, not a full count-corruption model. |
+| `results/figures/eb_vs_readout_error.png` | `scripts/run_noise_sweeps.py` | Alice-bit sign-flip diagnostic for the classical control path. |
 | `results/data/dephasing_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side phase noise sensitivity. |
 | `results/data/depolarizing_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side depolarizing noise sensitivity. |
 | `results/data/amplitude_damping_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side amplitude-damping sensitivity. |
@@ -117,7 +117,7 @@ measurement outcomes are averaged. The package never postselects branches.
 - `tests/`: regression tests for exact values, accounting, null behavior, and
   count-estimator conventions.
 - `docs/`: scientific notes for the first deliverable.
-- `paper/`: manuscript skeleton and reference placeholder.
+- `paper/`: JOSS-style manuscript draft, build notes, and bibliography.
 
 ## Publication Target
 
@@ -127,11 +127,12 @@ noise/readout diagnostics, command-line reproduction scripts, figures, and a
 manuscript scaffold. A later physics-paper route would require an additional
 scientific result beyond reproducing the two-qubit benchmark.
 
-## Controller/Battery Extension
+## Controller Accounting Extension
 
 The `qet_bench.controller` module wraps the exact ledger with nonnegative
-controller costs and reports `net_battery_gain = E_B - E_A - overhead`. This is
-an accounting extension, not a microscopic hardware model, and it keeps the
+controller costs and reports the diagnostic key
+`net_battery_gain = E_B - E_A - overhead`. This is a conservative accounting
+extension, not a microscopic hardware or battery model, and it keeps the
 measurement, communication, reset, and pulse resources explicit.
 
 ## Reproducibility Notes
