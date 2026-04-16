@@ -50,7 +50,7 @@ local extraction is reported against the Alice-side measurement/control ledger.
 
 ## Local Smoke Record
 
-For the `0.2.0` review target, the optional bridge was smoke-tested locally on
+For the `v0.2.0` review target, the optional bridge was smoke-tested locally on
 Python 3.12.8 with `qiskit==2.3.1` and `qiskit-aer==0.17.2`:
 
 ```bash

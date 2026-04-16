@@ -21,6 +21,12 @@ Reference policy:
 - Add an archive DOI, Software Heritage ID, or paper DOI when available.
 - For active work without a tag, use "pending" and replace it when merged.
 
+Current release identity:
+
+- `v0.2.0` is the active publication-hardening review target.
+- `0.2.0` is the package and citation metadata version.
+- Earlier `v0.2.0-*` entries in the table are historical milestone tags.
+
 | Stage | Status | Reproduction Or New Territory | Deliverable | Reference |
 |---|---|---|---|---|
 | Exact two-qubit QET benchmark package | Done | Reproduction | Minimal exact simulator, Hamiltonians, ledgers, null tests, count estimators, deterministic benchmark scripts, generated artifacts, artifact manifest. | `v0.1.0` |

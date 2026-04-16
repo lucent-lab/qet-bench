@@ -81,11 +81,11 @@ python -m pip install -e ".[qiskit]" -c requirements-lock.txt
 python scripts/run_qiskit_bridge.py
 ```
 
-The `0.2.0` review target was locally validated on Python 3.11 and Python 3.12.
+The `v0.2.0` review target was locally validated on Python 3.11 and Python 3.12.
 Hosted GitHub Actions is configured, but hosted jobs were blocked before
 execution by the account billing/spending limit at the time of this draft. The
 current local validation record is maintained in
-`docs/release_validation.md`.
+`../docs/release_validation.md`.
 
 # Reproduction checks
 
@@ -131,4 +131,3 @@ human review before acceptance.
 No external funding is declared.
 
 # References
-

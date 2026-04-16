@@ -8,6 +8,7 @@ Current review targets:
 
 - Repository: <https://github.com/lucent-lab/qet-bench>
 - Current review target: `v0.2.0`
+- Package/CFF version: `0.2.0`
 - Latest pre-candidate checkpoint: `v0.2.0-blocker-ledger`
 - Clean reproducibility baseline: `v0.1.0`
 - Citation metadata: `../CITATION.cff`

@@ -20,6 +20,12 @@ Reference policy:
 - Prefer DOI, Software Heritage ID, hosted CI run URL, or paper DOI when
   available.
 
+Current release identity:
+
+- `v0.2.0` is the active publication-hardening review target.
+- `0.2.0` is the package and citation metadata version.
+- Earlier `v0.2.0-*` references are historical milestone tags.
+
 | Blocker | Why it matters | Status | Scope | Resolution / Next Action | Reference |
 |---|---|---|---|---|---|
 | Missing exact benchmark implementation and regression fixtures | Without exact values, the package cannot serve as a reproducible QET benchmark. | Closed | Core software | Implemented exact Hamiltonian, ground state, QET ledger, benchmark CSV, figures, and regression tests. | `v0.1.0` |

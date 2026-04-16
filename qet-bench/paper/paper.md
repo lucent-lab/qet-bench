@@ -126,12 +126,12 @@ a mature community package with demonstrated external adoption.
 # Availability and reproducibility
 
 The software repository is
-<https://github.com/lucent-lab/qet-bench>. The current review target is version
-`0.2.0`; the latest pre-candidate project-management checkpoint is tagged as
-`v0.2.0-blocker-ledger`, and the earlier clean reproducibility baseline is
-tagged as `v0.1.0`. Generated artifacts are tracked for reviewer convenience,
-but the source of truth is the package code, tests, scripts, lock file, and
-artifact manifest.
+<https://github.com/lucent-lab/qet-bench>. The current review target is
+`v0.2.0` with package and citation version `0.2.0`; the latest pre-candidate
+project-management checkpoint is tagged as `v0.2.0-blocker-ledger`, and the
+earlier clean reproducibility baseline is tagged as `v0.1.0`. Generated
+artifacts are tracked for reviewer convenience, but the source of truth is the
+package code, tests, scripts, lock file, and artifact manifest.
 
 The local reproduction path is:
 
