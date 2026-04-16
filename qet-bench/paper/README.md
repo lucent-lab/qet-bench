@@ -47,10 +47,10 @@ The paper text is not yet a final submission. The hard blockers are:
 | Area | Required before submission |
 |---|---|
 | Author metadata | Confirm author list, affiliations, ORCID identifiers, and corresponding author. |
-| Archival DOI | Archive the target release with Zenodo, Software Heritage, or equivalent and update the paper metadata. |
+| Archival identifier | Closed for Software Heritage: `swh:1:snp:9636ad3f493c249270cba77ae4810908dce45834`. A Zenodo DOI can be added later if required. |
 | Repository access | Closed: the GitHub repository is public at <https://github.com/lucent-lab/qet-bench>. |
 | Public history | JOSS currently screens for sustained public development history and research impact; submit to JOSS only after those signals exist. |
-| Hosted CI | Re-run GitHub Actions when quota is available, or clearly document local CI as the validation record for a reproducibility venue. |
+| Hosted CI | Closed: GitHub Actions passed on Python 3.11 and 3.12 for the `v0.2.0` tag. |
 | Community guidelines | Keep `../CONTRIBUTING.md` current and make sure issue reporting and contribution workflow are visible from the repository root. |
 | Funding/COI | Replace the draft acknowledgement with explicit funding and conflict statements. |
 | AI disclosure | Human author must verify the AI usage disclosure is complete and accurate. |
@@ -69,7 +69,7 @@ python scripts/make_all_figures.py
 These commands were run locally on Python 3.11 and Python 3.12. Hosted GitHub
 Actions passed on Python 3.11 and Python 3.12 after the repository was made
 public:
-<https://github.com/lucent-lab/qet-bench/actions/runs/24507308274>.
+<https://github.com/lucent-lab/qet-bench/actions/runs/24507440880>.
 
 ## Venue Fit
 

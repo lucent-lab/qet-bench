@@ -11,6 +11,10 @@ license: MIT
 abstract: "A reproducible benchmark suite for minimal two-qubit Quantum Energy Teleportation with explicit ground-state energy accounting."
 repository-code: "https://github.com/lucent-lab/qet-bench"
 url: "https://github.com/lucent-lab/qet-bench"
+identifiers:
+  - type: swh
+    value: "swh:1:snp:9636ad3f493c249270cba77ae4810908dce45834"
+    description: "Software Heritage archived snapshot for the v0.2.0 review release."
 preferred-citation:
   type: software
   title: "qet-bench: Reproducible exact two-qubit Quantum Energy Teleportation benchmarks"

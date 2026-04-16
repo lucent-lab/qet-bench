@@ -133,6 +133,9 @@ earlier clean reproducibility baseline is tagged as `v0.1.0`. Generated
 artifacts are tracked for reviewer convenience, but the source of truth is the
 package code, tests, scripts, lock file, and artifact manifest.
 
+The public repository has been archived by Software Heritage with snapshot
+identifier `swh:1:snp:9636ad3f493c249270cba77ae4810908dce45834`.
+
 The local reproduction path is:
 
 ```bash
