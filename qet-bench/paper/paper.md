@@ -90,13 +90,16 @@ of new physics.
 
 ## Noise/Readout Sweeps
 
-The first release includes generated sweeps for classical feedforward/readout
-errors, dephasing, depolarizing noise, amplitude damping, and Bob-angle
-miscalibration. Open-system channel sweeps report the environment exchange term
-as a model diagnostic rather than as a closed thermodynamic ledger. The readout
-sweep is the symmetric Alice-bit sign-flip model used by Bob's classical
-feedforward, not a full count-corruption model. These sweeps are deterministic
-diagnostics and sensitivity checks; they are not threshold results.
+The release includes generated sweeps for classical feedforward/readout errors,
+dephasing, depolarizing noise, amplitude damping, and Bob-angle miscalibration.
+Open-system channel sweeps report the environment exchange term as a model
+diagnostic rather than as a closed thermodynamic ledger. The readout sweep is
+the symmetric Alice-bit sign-flip model used by Bob's classical feedforward,
+not a full count-corruption model. The fixed-protocol survival atlas extends
+these diagnostics to a small predeclared `(h, k)` anchor set and reports
+interval-averaged survival ratios over the sampled scan interval. These sweeps
+are deterministic diagnostics and sensitivity checks; they are not threshold
+results or universal robustness claims.
 
 ## Software Architecture
 
