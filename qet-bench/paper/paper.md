@@ -142,9 +142,9 @@ python scripts/reproduce_benchmarks.py
 python scripts/make_all_figures.py
 ```
 
-Hosted GitHub Actions CI is configured, but hosted jobs were blocked before
-execution by the account billing/spending limit at the time of this draft. Local
-CI is therefore the current validation record.
+Hosted GitHub Actions CI passed on Python 3.11 and Python 3.12 for the current
+review target. Local CI and optional Qiskit/Aer smoke checks are recorded in
+`docs/release_validation.md`.
 
 # Limitations
 

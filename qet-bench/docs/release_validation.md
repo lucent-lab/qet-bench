@@ -1,8 +1,6 @@
 # Release Validation Log
 
-This log records local validation for review snapshots while hosted GitHub
-Actions jobs are unavailable. Hosted CI remains the preferred independent
-validation path once account billing/quota allows runners to start.
+This log records hosted and local validation for review snapshots.
 
 ## v0.2.0 Review Target
 
@@ -11,10 +9,11 @@ Date: 2026-04-16
 Hosted CI status:
 
 - Workflow: `.github/workflows/ci.yml`
-- Representative hosted run checked:
-  <https://github.com/lucent-lab/qet-bench/actions/runs/24507161016>
-- Result: jobs did not start because the account billing/spending limit blocked
-  hosted runners.
+- Passing run:
+  <https://github.com/lucent-lab/qet-bench/actions/runs/24507308274>
+- Result: Python 3.11 and Python 3.12 jobs passed. GitHub emitted a
+  non-blocking Node.js 20 deprecation warning for `actions/checkout@v4` and
+  `actions/setup-python@v5`.
 
 Local CI mirror:
 
@@ -34,4 +33,3 @@ Optional Qiskit/Aer bridge:
 
 The optional bridge artifact lives under the ignored `results/` tree unless a
 future release deliberately force-adds optional interoperability outputs.
-
