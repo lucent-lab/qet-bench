@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.run_noise_sweeps import main as run_noise_sweeps
+from scripts.run_noise_survival import main as run_noise_survival
 from scripts.run_null_tests import main as run_null_tests
 from scripts.run_parameter_sweep import main as run_parameter_sweep
 from scripts.run_reference_branch import main as run_reference_branch
@@ -20,6 +21,7 @@ def main() -> None:
     run_parameter_sweep()
     run_reference_branch()
     run_noise_sweeps()
+    run_noise_survival()
     run_null_tests()
 
 

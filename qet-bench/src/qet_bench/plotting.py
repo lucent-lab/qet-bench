@@ -111,6 +111,36 @@ def plot_null_comparison(
     return fig
 
 
+def plot_survival_summary(
+    data: pd.DataFrame,
+    output_path: str | Path | None = None,
+) -> Figure:
+    """Plot half-survival and zero-crossing estimates for survival diagnostics."""
+    fig, ax = plt.subplots(figsize=(8.0, 4.0), dpi=150)
+    labels = data["survival_model"].astype(str).tolist()
+    x_positions = range(len(labels))
+    width = 0.36
+    ax.bar(
+        [x - width / 2.0 for x in x_positions],
+        data["lambda_ratio_cutoff"].astype(float),
+        width=width,
+        label="R=0.5 crossing",
+    )
+    ax.bar(
+        [x + width / 2.0 for x in x_positions],
+        data["lambda_zero_crossing"].astype(float),
+        width=width,
+        label="E_B=0 crossing",
+    )
+    ax.set_xticks(list(x_positions), labels, rotation=20, ha="right")
+    ax.set_ylabel("scan coordinate")
+    ax.set_title("Noise-survival diagnostics")
+    ax.legend()
+    ax.grid(True, axis="y", alpha=0.3)
+    _save(fig, output_path)
+    return fig
+
+
 def _save(fig: Figure, output_path: str | Path | None) -> None:
     if output_path is None:
         fig.tight_layout()

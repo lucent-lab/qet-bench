@@ -1,0 +1,67 @@
+[
+  {
+    "survival_model": "feedforward_error",
+    "x_column": "feedforward_error_probability",
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "baseline_E_B": 0.07257277587322122,
+    "min_E_B": -0.21026993660139753,
+    "min_survival_ratio": -2.8973665961010244,
+    "lambda_ratio_cutoff": 0.12829175487371547,
+    "lambda_zero_crossing": 0.2565835097474315,
+    "first_sampled_nonpositive_x": 0.26,
+    "ratio_cutoff": 0.5
+  },
+  {
+    "survival_model": "alice_bit_readout_error",
+    "x_column": "readout_error_probability",
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "baseline_E_B": 0.07257277587322122,
+    "min_E_B": -0.21026993660139753,
+    "min_survival_ratio": -2.8973665961010244,
+    "lambda_ratio_cutoff": 0.12829175487371547,
+    "lambda_zero_crossing": 0.2565835097474315,
+    "first_sampled_nonpositive_x": 0.26,
+    "ratio_cutoff": 0.5
+  },
+  {
+    "survival_model": "bob_dephasing",
+    "x_column": "noise_strength",
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "baseline_E_B": 0.07257277587322122,
+    "min_E_B": -0.49311264907601676,
+    "min_survival_ratio": -6.794733192202056,
+    "lambda_ratio_cutoff": 0.06414587743685785,
+    "lambda_zero_crossing": 0.12829175487371566,
+    "first_sampled_nonpositive_x": 0.13,
+    "ratio_cutoff": 0.5
+  },
+  {
+    "survival_model": "bob_depolarizing",
+    "x_column": "noise_strength",
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "baseline_E_B": 0.07257277587322122,
+    "min_E_B": -1.8130453072909045,
+    "min_survival_ratio": -24.98244397400684,
+    "lambda_ratio_cutoff": 0.019243763231057337,
+    "lambda_zero_crossing": 0.03848752646211471,
+    "first_sampled_nonpositive_x": 0.04,
+    "ratio_cutoff": 0.5
+  },
+  {
+    "survival_model": "bob_amplitude_damping",
+    "x_column": "noise_strength",
+    "x_min": 0.0,
+    "x_max": 1.0,
+    "baseline_E_B": 0.07257277587322122,
+    "min_E_B": -2.6065518505672247,
+    "min_survival_ratio": -35.91638626474286,
+    "lambda_ratio_cutoff": 0.014295692050137095,
+    "lambda_zero_crossing": 0.02858609139645247,
+    "first_sampled_nonpositive_x": 0.03,
+    "ratio_cutoff": 0.5
+  }
+]

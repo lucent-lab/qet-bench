@@ -37,7 +37,8 @@ The scripts write reproducible artifacts under `results/data/` and
 `make_all_figures.py` emits the exact ledger sweep, null-test diagnostics,
 wrong-angle scan, feedforward/readout error sweeps, dephasing, depolarizing,
 amplitude-damping, Bob-angle miscalibration, and coarse sampled crossing
-summaries.
+summaries. It also emits fixed-protocol noise-survival diagnostics using the
+ratio `R(lambda)=E_B(lambda)/E_B(0)`.
 
 See [docs/artifact_manifest.md](docs/artifact_manifest.md) for the full
 CSV/figure provenance table.
