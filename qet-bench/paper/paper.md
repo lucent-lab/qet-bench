@@ -1,4 +1,4 @@
-# qet-bench: Exact Two-Qubit Quantum Energy Teleportation Benchmarks
+# qet-bench: A Reproducible Software Benchmark for Two-Qubit Quantum Energy Teleportation
 
 ## Abstract
 
@@ -6,9 +6,11 @@ We present `qet-bench`, a compact Python benchmark suite for the minimal
 two-qubit Quantum Energy Teleportation protocol. The package reproduces exact
 benchmark energies, records the Alice and Bob ledger terms, and includes null
 tests, noise/readout diagnostics, and a controller-inclusive accounting layer.
-The central accounting result is that Bob-side local energy extraction is
-accompanied by Alice-side energy injection and satisfies `E_A >= E_B` in the
-exact ground-state protocol.
+The package reproduces the known benchmark and checks that Bob-side local
+energy extraction is accompanied by Alice-side energy injection with
+`E_A >= E_B` in the exact ground-state protocol. This paper reports a release
+artifact and reference implementation; it does not claim a new QET theorem,
+many-body result, hardware demonstration, or autonomous energy source.
 
 ## Statement of Need
 
@@ -20,6 +22,8 @@ accounting [@hotta2008measurement; @hotta2009spin]. Recent hardware-oriented
 work has renewed interest in small, auditable reproductions of the effect
 [@ikeda2023hardware]. `qet-bench` is intended to make the minimal example easy
 to rerun, test, and extend without requiring a quantum SDK or cloud hardware.
+The goal is a stable reference implementation with tests, deterministic outputs,
+and a reproducible artifact set.
 
 Small reproducible benchmarks also help separate the real local QET effect from
 incorrect interpretations that omit the measurement/control ledger. The
@@ -30,9 +34,10 @@ memory reset, and controller work [@landauer1961irreversibility;
 
 ## Model
 
-The software implements the two-qubit Hamiltonian `H_tot = H0 + H1 + V` with the
-analytic ground state, Alice `X0` measurement, and Bob `Y1` feedforward rotation.
-All branches are averaged without postselection.
+This paper documents the exact two-qubit benchmark implemented by `qet-bench`.
+The software implements the Hamiltonian `H_tot = H0 + H1 + V` with the analytic
+ground state, Alice `X0` measurement, and Bob `Y1` feedforward rotation. All
+branches are averaged without postselection.
 
 For `s = sqrt(h^2 + k^2)`, the terms are
 
@@ -50,24 +55,26 @@ extracted energy ledger directly testable.
 ## Energy Accounting
 
 The reported ledger includes `E_A`, `H1`, `V`, `E1`, `E_B`, and
-`E_A - E_B`. The exact ground-state protocol is required to satisfy
+`E_A - E_B`. In the reproduced benchmark, the ledger satisfies
 `E_A - E_B >= 0` within numerical tolerance.
 
 The controller-inclusive extension adds explicit nonnegative overheads for
 measurement-record reset, classical communication, Bob's control pulse, state
-preparation, and calibration. It reports
+preparation, and calibration. This layer is a conservative accounting
+diagnostic, not a microscopic battery model or hardware validation. It reports
 
 ```math
 W_\mathrm{net}=E_B-E_A-W_\mathrm{controller},
 ```
 
-which must remain nonpositive for the ground-state protocol when all controller
-costs are nonnegative.
+which is reported as nonpositive for the ground-state protocol under the stated
+nonnegative-overhead assumptions.
 
-## Exact Reproduction Benchmarks
+## Canonical Regression Benchmarks
 
 The first benchmark point is `h=1, k=0.5`; the second is `h=1, k=1`. Both are
-included as regression tests with absolute tolerance `1e-9`.
+encoded as regression tests and release artifacts with absolute tolerance
+`1e-9`.
 
 | `h` | `k` | `E_A` | `H1` | `V` | `E1` | `E_B` |
 |---:|---:|---:|---:|---:|---:|---:|
@@ -77,7 +84,9 @@ included as regression tests with absolute tolerance `1e-9`.
 ## Null Tests
 
 Null tests cover zero coupling, scrambled feedforward, a product-state
-reference, wrong-angle scans, and Bob-only random local unitaries.
+reference, wrong-angle scans, and Bob-only random local unitaries. These are
+deterministic diagnostics for correctness and convention handling, not evidence
+of new physics.
 
 ## Noise/Readout Sweeps
 
@@ -86,7 +95,8 @@ errors, dephasing, depolarizing noise, amplitude damping, and Bob-angle
 miscalibration. Open-system channel sweeps report the environment exchange term
 as a model diagnostic rather than as a closed thermodynamic ledger. The readout
 sweep is the symmetric Alice-bit sign-flip model used by Bob's classical
-feedforward, not a full count-corruption model.
+feedforward, not a full count-corruption model. These sweeps are deterministic
+diagnostics and sensitivity checks; they are not threshold results.
 
 ## Software Architecture
 
@@ -95,15 +105,24 @@ construction, exact protocol simulation, ledgers, null tests, noise channels,
 count estimators, sweep utilities, statistics, controller accounting, and
 plotting. It uses NumPy, SciPy, pandas, and Matplotlib
 [@harris2020array; @virtanen2020scipy; @mckinney2010data; @hunter2007matplotlib].
+The release artifact manifest maps each CSV and figure to its generating script,
+source data, and test coverage. The primary reproduction path is:
+
+```bash
+python -m pip install -e ".[dev]" -c requirements-lock.txt
+python -m pytest
+python scripts/reproduce_benchmarks.py
+python scripts/make_all_figures.py
+```
 
 ## Limitations
 
 This release is a two-qubit exact benchmark. The controller/battery layer is a
 conservative accountant, not a microscopic detector, memory, pulse generator, or
 hardware backend. It does not establish a new many-body threshold or an
-experimental hardware claim.
+experimental hardware claim. This release does not claim a new QET mechanism,
+many-body scaling law, threshold theorem, or hardware demonstration.
 
 ## References
 
 See `references.bib`.
-
