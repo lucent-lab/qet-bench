@@ -6,10 +6,12 @@ remaining usable as a source for ReScience C or SoftwareX adaptation.
 Current review targets:
 
 - Repository: <https://github.com/lucent-lab/qet-bench>
-- Current review snapshot: `v0.2.0-noise-atlas`
+- Current review target: `v0.2.0`
+- Latest pre-candidate checkpoint: `v0.2.0-blocker-ledger`
 - Clean reproducibility baseline: `v0.1.0`
 - Citation metadata: `../CITATION.cff`
 - Artifact manifest: `../docs/artifact_manifest.md`
+- Release validation log: `../docs/release_validation.md`
 - Bibliography source: `references.bib`
 
 ## Local Build
@@ -50,7 +52,7 @@ The paper text is not yet a final submission. The hard blockers are:
 | AI disclosure | Human author must verify the AI usage disclosure is complete and accurate. |
 | Venue template | ReScience C and SoftwareX require their own article templates and metadata; this file is the JOSS-style source, not the final template for those venues. |
 
-Verification record for `v0.1.0`:
+Verification record for the `v0.2.0` review target:
 
 ```bash
 python -m pip install --upgrade -c requirements-lock.txt pip setuptools wheel
@@ -61,8 +63,10 @@ python scripts/make_all_figures.py
 ```
 
 These commands were run locally on Python 3.11 and Python 3.12. Hosted GitHub
-Actions is configured, but hosted jobs were blocked by organization runner
-quota at the time this note was written.
+Actions is configured, but hosted jobs were blocked before execution by the
+account billing/spending limit at the time this note was written. The latest
+blocked hosted run was
+<https://github.com/lucent-lab/qet-bench/actions/runs/24506144229>.
 
 ## Venue Fit
 

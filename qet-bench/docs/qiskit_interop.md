@@ -47,3 +47,18 @@ The optional Aer script is therefore a simulator-interoperability diagnostic,
 not a replacement for the exact ledger and not a hardware execution protocol.
 As in the rest of the package, no result is interpreted as free energy: Bob's
 local extraction is reported against the Alice-side measurement/control ledger.
+
+## Local Smoke Record
+
+For the `0.2.0` review target, the optional bridge was smoke-tested locally on
+Python 3.12.8 with `qiskit==2.3.1` and `qiskit-aer==0.17.2`:
+
+```bash
+python -m pip install -e ".[qiskit]" -c requirements-lock.txt
+python scripts/run_qiskit_bridge.py
+```
+
+The script wrote `results/data/qiskit_bridge_benchmarks.csv` with absolute
+`E_B` errors of approximately `0.01553` for `(h=1, k=0.5)` and `0.00279` for
+`(h=1, k=1)`. This CSV is generated under the ignored `results/` tree unless a
+future release deliberately archives optional interoperability artifacts.

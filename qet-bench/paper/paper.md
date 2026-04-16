@@ -104,10 +104,10 @@ guards, and fixed-protocol noise-survival diagnostics. The local quality gate
 installs the pinned dependency set and regenerates benchmark and figure
 artifacts:
 
-| Python | Commands |
+| Environment | Commands |
 |---|---|
-| 3.11 | `pytest`; `reproduce_benchmarks.py`; `make_all_figures.py`; `run_qiskit_bridge.py` |
-| 3.12 | `pytest`; `reproduce_benchmarks.py`; `make_all_figures.py`; `run_qiskit_bridge.py` |
+| Python 3.11 and 3.12 base path | `pytest`; `reproduce_benchmarks.py`; `make_all_figures.py` |
+| Python 3.12 optional bridge | `pip install -e ".[qiskit]"`; `run_qiskit_bridge.py` |
 
 # Research impact statement
 
@@ -126,11 +126,12 @@ a mature community package with demonstrated external adoption.
 # Availability and reproducibility
 
 The software repository is
-<https://github.com/lucent-lab/qet-bench>. The current review snapshot is tagged
-as `v0.2.0-noise-atlas`; the earlier clean reproducibility baseline is tagged
-as `v0.1.0`. Generated artifacts are tracked for reviewer convenience, but the
-source of truth is the package code, tests, scripts, lock file, and artifact
-manifest.
+<https://github.com/lucent-lab/qet-bench>. The current review target is version
+`0.2.0`; the latest pre-candidate project-management checkpoint is tagged as
+`v0.2.0-blocker-ledger`, and the earlier clean reproducibility baseline is
+tagged as `v0.1.0`. Generated artifacts are tracked for reviewer convenience,
+but the source of truth is the package code, tests, scripts, lock file, and
+artifact manifest.
 
 The local reproduction path is:
 
@@ -141,9 +142,9 @@ python scripts/reproduce_benchmarks.py
 python scripts/make_all_figures.py
 ```
 
-Hosted GitHub Actions CI is configured, but hosted jobs were blocked by the
-organization runner quota at the time of this draft. Local CI is therefore the
-current validation record.
+Hosted GitHub Actions CI is configured, but hosted jobs were blocked before
+execution by the account billing/spending limit at the time of this draft. Local
+CI is therefore the current validation record.
 
 # Limitations
 

@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "qet-bench"
-version = "0.1.0"
+version = "0.2.0"
 description = "Reproducible exact benchmarks for minimal two-qubit Quantum Energy Teleportation."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { file = "LICENSE" }
 authors = [
-  { name = "qet-bench contributors" }
+  { name = "Francois Gueguen" }
 ]
 dependencies = [
   "numpy",
