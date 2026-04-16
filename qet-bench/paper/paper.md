@@ -6,11 +6,11 @@ We present `qet-bench`, a compact Python benchmark suite for the minimal
 two-qubit Quantum Energy Teleportation protocol. The package reproduces exact
 benchmark energies, records the Alice and Bob ledger terms, and includes null
 tests, noise/readout diagnostics, and a controller-inclusive accounting layer.
-The package reproduces the known benchmark and checks that Bob-side local
-energy extraction is accompanied by Alice-side energy injection with
-`E_A >= E_B` in the exact ground-state protocol. This paper reports a release
-artifact and reference implementation; it does not claim a new QET theorem,
-many-body result, hardware demonstration, or autonomous energy source.
+The release reproduces the known benchmark and checks that Bob-side local energy
+extraction is accompanied by Alice-side energy injection with `E_A >= E_B` in
+the exact ground-state protocol. This paper reports a release artifact and
+reference implementation; it does not claim a new QET theorem, many-body result,
+hardware demonstration, or autonomous energy source.
 
 ## Statement of Need
 
@@ -115,6 +115,22 @@ python scripts/reproduce_benchmarks.py
 python scripts/make_all_figures.py
 ```
 
+## Availability and Reproducibility
+
+The software is available at
+<https://github.com/lucent-lab/qet-bench>. The reproducibility snapshot for this
+paper is the `v0.1.0` tag. The release tracks generated `results/` artifacts for
+reviewer convenience, but the source of truth is the package code, tests,
+scripts, `requirements-lock.txt`, and the artifact manifest in
+`docs/artifact_manifest.md`.
+
+Local verification for the `v0.1.0` release was run with the pinned install path
+on Python 3.11 and Python 3.12. The validation commands installed the package,
+ran the test suite, reproduced the canonical benchmark CSV, and regenerated all
+figures. Hosted GitHub Actions CI is configured, but at the time of this draft
+the organization runner quota prevented hosted jobs from starting; local CI is
+therefore the validation record for the current release.
+
 ## Limitations
 
 This release is a two-qubit exact benchmark. The controller/battery layer is a
@@ -122,6 +138,10 @@ conservative accountant, not a microscopic detector, memory, pulse generator, or
 hardware backend. It does not establish a new many-body threshold or an
 experimental hardware claim. This release does not claim a new QET mechanism,
 many-body scaling law, threshold theorem, or hardware demonstration.
+
+Before submission, the remaining venue-specific risks are citation-style
+adaptation, author and affiliation metadata, template formatting, and any
+journal-specific archival requirements for the generated artifacts.
 
 ## References
 
