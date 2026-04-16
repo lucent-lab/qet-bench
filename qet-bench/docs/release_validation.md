@@ -10,10 +10,18 @@ Hosted CI status:
 
 - Workflow: `.github/workflows/ci.yml`
 - Passing run:
-  <https://github.com/lucent-lab/qet-bench/actions/runs/24507308274>
+  <https://github.com/lucent-lab/qet-bench/actions/runs/24507440880>
 - Result: Python 3.11 and Python 3.12 jobs passed. GitHub emitted a
   non-blocking Node.js 20 deprecation warning for `actions/checkout@v4` and
   `actions/setup-python@v5`.
+
+Archive status:
+
+- GitHub release: <https://github.com/lucent-lab/qet-bench/releases/tag/v0.2.0>
+- Software Heritage snapshot:
+  `swh:1:snp:9636ad3f493c249270cba77ae4810908dce45834`
+- Software Heritage save request:
+  <https://archive.softwareheritage.org/api/1/origin/save/2305260/>
 
 Local CI mirror:
 
