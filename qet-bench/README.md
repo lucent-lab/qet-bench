@@ -45,8 +45,13 @@ See [docs/artifact_manifest.md](docs/artifact_manifest.md) for the full
 CSV/figure provenance table. See
 [docs/research_roadmap.md](docs/research_roadmap.md) for the maintained
 roadmap table that separates reproduction work from new research territory and
-records milestone tags. See [docs/blocker_ledger.md](docs/blocker_ledger.md)
-for the maintained review/submission blocker ledger.
+records milestone tags. See
+[docs/release_validation.md](docs/release_validation.md) for the current local
+validation log while hosted GitHub Actions runners are unavailable. See
+[docs/vacuum_investigation_roadmap.md](docs/vacuum_investigation_roadmap.md)
+for the step-by-step path from QET benchmarks toward deeper vacuum-energy
+accounting audits. See [docs/blocker_ledger.md](docs/blocker_ledger.md) for
+the maintained review/submission blocker ledger.
 
 ## Optional Qiskit/Aer Bridge
 

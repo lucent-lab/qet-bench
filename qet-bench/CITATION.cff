@@ -1,20 +1,20 @@
 cff-version: 1.2.0
 message: "If you use qet-bench, please cite this software."
-title: "qet-bench: Exact two-qubit Quantum Energy Teleportation benchmarks"
-version: "0.2.0-noise-atlas"
+title: "qet-bench: Reproducible exact two-qubit Quantum Energy Teleportation benchmarks"
+version: "0.2.0"
 date-released: 2026-04-16
 authors:
   - family-names: "Gueguen"
     given-names: "Francois"
     affiliation: "Lucent Lab"
 license: MIT
-abstract: "A reproducible benchmark suite for minimal two-qubit Quantum Energy Teleportation with explicit energy accounting."
+abstract: "A reproducible benchmark suite for minimal two-qubit Quantum Energy Teleportation with explicit ground-state energy accounting."
 repository-code: "https://github.com/lucent-lab/qet-bench"
 url: "https://github.com/lucent-lab/qet-bench"
 preferred-citation:
   type: software
-  title: "qet-bench: Exact two-qubit Quantum Energy Teleportation benchmarks"
-  version: "0.2.0-noise-atlas"
+  title: "qet-bench: Reproducible exact two-qubit Quantum Energy Teleportation benchmarks"
+  version: "0.2.0"
   date-released: 2026-04-16
   authors:
     - family-names: "Gueguen"

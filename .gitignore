@@ -23,8 +23,10 @@ dist/
 # Generated benchmark artifacts
 qet-bench/results/
 
+# Private planning notes outside the publishable package tree
+/docs/
+
 # Editor and OS noise
 .DS_Store
 .idea/
 .vscode/
-
