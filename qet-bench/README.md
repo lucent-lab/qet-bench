@@ -37,6 +37,33 @@ wrong-angle scan, feedforward/readout error sweeps, dephasing, depolarizing,
 amplitude-damping, Bob-angle miscalibration, and coarse sampled crossing
 summaries.
 
+See [docs/artifact_manifest.md](docs/artifact_manifest.md) for the full
+CSV/figure provenance table.
+
+## Artifact Manifest
+
+| Artifact | Script | What it validates |
+|---|---|---|
+| `results/data/benchmarks.csv` | `scripts/reproduce_benchmarks.py` | Exact benchmark values for the two quoted parameter points and the final-state trace check. |
+| `results/data/h_over_k_sweep.csv` | `scripts/run_parameter_sweep.py` | Smooth ledger behavior across the main `h/k` scan. |
+| `results/figures/energy_ledger_vs_h_over_k.png` | `scripts/run_parameter_sweep.py` | Visual ledger check for the exact protocol as coupling ratio varies. |
+| `results/data/feedforward_error_sweep.csv` | `scripts/run_noise_sweeps.py` | Sensitivity to scrambled classical feedforward. |
+| `results/figures/eb_vs_feedforward_error.png` | `scripts/run_noise_sweeps.py` | Monotone loss or reversal of Bob extraction under feedforward error. |
+| `results/data/readout_error_sweep.csv` | `scripts/run_noise_sweeps.py` | Symmetric Alice-bit readout corruption model. |
+| `results/figures/eb_vs_readout_error.png` | `scripts/run_noise_sweeps.py` | Readout-error diagnostic for the classical control path. |
+| `results/data/dephasing_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side phase noise sensitivity. |
+| `results/data/depolarizing_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side depolarizing noise sensitivity. |
+| `results/data/amplitude_damping_sweep.csv` | `scripts/run_noise_sweeps.py` | Bob-side amplitude-damping sensitivity. |
+| `results/data/bob_angle_miscalibration_sweep.csv` | `scripts/run_noise_sweeps.py` | Robustness to Bob-angle miscalibration. |
+| `results/data/noise_crossings.csv` | `scripts/run_noise_sweeps.py` | Coarse sampled crossing metadata for the noise sweeps. |
+| `results/data/k_zero_scan.csv` | `scripts/run_null_tests.py` | Vanishing extraction in the `k \to 0` null limit. |
+| `results/data/scrambled_bit_scan.csv` | `scripts/run_null_tests.py` | Loss of extraction as the feedforward bit is randomized. |
+| `results/data/wrong_angle_scan.csv` | `scripts/run_null_tests.py` | Bob-angle scan against the analytic optimum. |
+| `results/data/bob_only_random_scan.csv` | `scripts/run_null_tests.py` | Diagnostic upper bound for Bob-only local unitaries. |
+| `results/data/null_tests_summary.json` | `scripts/run_null_tests.py` | Compact summary of the null-test outcomes. |
+| `results/figures/null_test_comparison.png` | `scripts/run_null_tests.py` | Side-by-side null-test comparison figure. |
+| `results/figures/wrong_angle_scan.png` | `scripts/run_null_tests.py` | Bob-angle miscalibration figure. |
+
 ## Exact Benchmarks
 
 | h | k | E_A | H1 | V | E1 | E_B |
