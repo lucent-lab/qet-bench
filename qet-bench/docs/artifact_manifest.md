@@ -36,6 +36,8 @@ Artifact classes used below:
 | Artifact | Class | Generator | Validation coverage | What it validates |
 |---|---|---|---|---|
 | `results/data/benchmarks.csv` | Canonical regression | `scripts/reproduce_benchmarks.py` | `test_exact_benchmarks.py`, `test_global_accounting.py` | Exact primary and secondary benchmark ledgers for `h=1,k=0.5` and `h=1,k=1`, including `E_A`, `H1`, `V`, `E1`, `E_B`, and `E_A - E_B`. |
+| `results/data/reference_branch_benchmarks.csv` | Canonical regression | `scripts/run_reference_branch.py` | `test_reference_branch.py` | Independent pure-Python branch-amplitude reproduction of the two benchmark ledgers. |
+| `results/data/reference_branch_audit_h1_k0p5.csv` | Release diagnostic | `scripts/run_reference_branch.py` | `test_reference_branch.py` | Alice-branch weights and branch energies for the primary benchmark, used to audit unconditional averaging. |
 | `results/data/h_over_k_sweep.csv` | Release diagnostic | `scripts/run_parameter_sweep.py` | `test_global_accounting.py` | Parameter dependence of Alice input, Bob extraction, and global accounting gap across `h/k`. |
 | `results/data/feedforward_error_sweep.csv` | Release diagnostic | `scripts/run_noise_sweeps.py` | `test_scrambled_bit.py`, `test_noisy_sweeps.py` | Bob extraction under Alice-to-Bob sign-flip probability `q`; checks that useful extraction depends on classical feedforward correlation. |
 | `results/data/readout_error_sweep.csv` | Release diagnostic | `scripts/run_noise_sweeps.py` | `test_noisy_sweeps.py`, `test_noise_readout.py` | Same symmetric Alice-bit sign-flip model presented as a readout/feedforward diagnostic, not a full hardware count-corruption model. |
@@ -64,4 +66,3 @@ Artifact classes used below:
 | `results/figures/eb_vs_bob_angle_miscalibration.png` | Release diagnostic | `scripts/run_noise_sweeps.py` | `results/data/bob_angle_miscalibration_sweep.csv` | Bob extraction versus rotation-angle offset. |
 | `results/figures/null_test_comparison.png` | Release diagnostic | `scripts/run_null_tests.py` | `results/data/null_tests_summary.json` | Side-by-side `E_B` values for baseline and null diagnostics. |
 | `results/figures/wrong_angle_scan.png` | Release diagnostic | `scripts/run_null_tests.py` | `results/data/wrong_angle_scan.csv` | Bob extraction over scanned Bob rotation angles with the analytic optimum marked. |
-

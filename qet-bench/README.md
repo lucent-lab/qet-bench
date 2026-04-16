@@ -4,6 +4,8 @@
 Energy Teleportation (QET) protocol. It implements the exact Hamiltonian model,
 Alice measurement, classical feedforward, Bob rotation, energy ledger, null
 tests, count-based estimators, and deterministic figure scripts.
+It also includes a pure-Python reference branch implementation that cross-checks
+the exact benchmark without using the main NumPy matrix propagation path.
 
 The scientific target is narrow and explicit: demonstrate Bob-side local energy
 extraction from an entangled ground state after Alice measurement and classical
