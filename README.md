@@ -40,4 +40,5 @@ python scripts/run_qiskit_bridge.py
 - [Research roadmap register](qet-bench/docs/research_roadmap.md)
 - [Blocker ledger](qet-bench/docs/blocker_ledger.md)
 - [Manuscript draft](qet-bench/paper/paper.md)
+- [ReScience-oriented manuscript](qet-bench/paper/rescience.md)
 - [Manuscript build notes](qet-bench/paper/README.md)
