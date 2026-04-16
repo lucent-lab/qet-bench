@@ -42,7 +42,10 @@ small predeclared `(h, k)` anchor set using the ratio
 `R(lambda)=E_B(lambda)/E_B(0)`.
 
 See [docs/artifact_manifest.md](docs/artifact_manifest.md) for the full
-CSV/figure provenance table.
+CSV/figure provenance table. See
+[docs/research_roadmap.md](docs/research_roadmap.md) for the maintained
+roadmap table that separates reproduction work from new research territory and
+records milestone tags.
 
 ## Optional Qiskit/Aer Bridge
 
