@@ -4,6 +4,8 @@ This register tracks the project roadmap at publication granularity. It should
 be updated whenever a stage changes status, a release tag is cut, or an archive
 DOI becomes available.
 
+For review risks and submission blockers, see `blocker_ledger.md`.
+
 Status values:
 
 - **Done:** implemented, locally verified, merged, and tagged.
@@ -46,5 +48,7 @@ When updating this table:
    tagged or archived.
 3. Replace tag-only references with DOI/SWHID references when archival records
    exist.
-4. Keep no-free-energy and fixed-protocol/no-threshold language visible for any
+4. Update `blocker_ledger.md` when a stage opens, carries, mitigates, or closes
+   a review blocker.
+5. Keep no-free-energy and fixed-protocol/no-threshold language visible for any
    stage involving accounting, noise, or hardware.
